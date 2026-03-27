@@ -1,0 +1,12 @@
+# Dependencies
+node_modules/
+# Environment variables
+.env
+.env.local
+
+# Build artifacts
+dist/
+build/
+*.js   # Compiled JavaScript files (if generated alongside source)
+*.map  # Source map files
+*.d.ts # TypeScript declaration files (if generated in output dir)
