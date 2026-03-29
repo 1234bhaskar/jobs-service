@@ -1,7 +1,7 @@
 import express from 'express';
 import { serverConfig } from './config/index.ts';
 import { appErrorHandler, genericErrorHandler } from './middleware/error.middleware.ts';
-import router from './routes/jobs.routes.ts';
+import jobRouter from './routes/jobs.routes.ts';
 import companyRouter from './routes/company.routes.ts';
 import { responseTemplate } from './middleware/response.middleware.ts';
 const app = express();
@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(responseTemplate);
 
-app.use("/api/jobs", router);
+app.use("/api/jobs", jobRouter);
 app.use("/api/companies", companyRouter);
 
 /**
